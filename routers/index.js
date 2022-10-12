@@ -10,14 +10,7 @@ const general = [
         handler: (request, h) => {
             return h.response('Resquest Not Found!').code(404);
         }
-    },
-    {
-        method: 'GET',
-        path: '/test',
-        handler: (request, h) => {
-            return h.response('Test réussi').code(200);
-        }
-    },
+    }
 ];
 
 module.exports = general.concat(movie, serie, survey, cinema);
