@@ -1,3 +1,5 @@
 ---
 deployment:
   tasks:
+    - export DEPLOYPATH=/home/thodetfils/PROJECTS/entertainment/
+    - /bin/cp -R ./ $DEPLOYPATH
