@@ -14,6 +14,7 @@ const Vision = require('@hapi/vision');
 const Swagger = require('./config/swagger')
 const ServerConfig = require('./config/server')
 const AuthConfig = require('./config/auth')
+const orm = require('./models')
 
 const mongoose = require('mongoose');
 const Routes = require('./routers');
@@ -40,6 +41,8 @@ const start = async () => {
     const db = mongoose.connection;
     db.on('error', console.error.bind(console, 'connection error:'));
     db.once('open', () => console.log("Connected to Mongoose"));
+
+    orm.db.sync({logging: console.log});
 
     console.log('Server running at: ' + server.info.uri);
 };

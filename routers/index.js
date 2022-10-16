@@ -2,6 +2,7 @@ const movie = require('./movie');
 const serie = require('./serie');
 const survey = require('./survey');
 const cinema = require('./cinema');
+const top = require('./top');
 
 const general = [
     {
@@ -13,4 +14,4 @@ const general = [
     }
 ];
 
-module.exports = general.concat(movie, serie, survey, cinema);
+module.exports = general.concat(movie, serie, survey, cinema, top);
