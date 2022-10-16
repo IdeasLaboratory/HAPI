@@ -7,9 +7,8 @@ const MovieSchema = new Schema({
         required : true,
     },
     creation : {
-        type : Number,
-        required : true,
-        default : 2000
+        type : Date,
+        required : true
     },
     image : {
         type : String,
